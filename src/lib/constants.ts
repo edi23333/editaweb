@@ -1,8 +1,10 @@
+import { MEDIA } from "@/lib/media";
+
 export const SITE = {
   name: "Slastičarna Gala",
   owner: "Nijaz Raščić",
   tagline:
-    "Svježi kolači, odlična kafa i ugodna atmosfera u srcu Sarajeva.",
+    "Spoj vrhunske kafe, svježih kolača i ugodnog ambijenta u Sarajevu.",
   description:
     "Slastičarna Gala — omiljena lokalna slastičarna u Sarajevu. Uživajte u kvalitetnoj kafi, domaćim tortama, kolačima i opuštajućoj atmosferi",
   url: "https://slasticarna-gala.ba",
@@ -46,25 +48,7 @@ export const UI = {
   visitUs: "Posjetite nas",
   quickLinks: "Brzi linkovi",
   allRights: "Sva prava zadržana.",
-
- 
-  photoCredit: "Fotografije: Google Maps (javno dostupne)",
-} as const;
-
-/** Real publicly available photos from Google Maps listing for Slastičarna Gala */
-const GALA_PHOTOS = {
-  exterior:
-    "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnQg5bJJa0NXBxVvN3xKuNgFT2Ta1fOcmTMpjsgoatTq02jX4vAghREC1g9YneUj0m5RJ3zyVDOVy7FktM1RkDbzggPGpUaG1G41hhLZqO0FJbWmrN5dPPPjBQc2cBE51v1jzPb=w1200-h900-k-no",
-  interior1:
-    "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmrba0M1dMK4jqAWL-66GCVIIjcNNMcsy3VfOiVV-eRreCHeJanJb6l4scjJXuUjTqiwIZMufO_1XD4FzogCKtPSv9BDfFIGl5Th0sgSthn62gALy2Dr3PqidezLwmNZU14vpf1HIt3t6My=w1200-h900-k-no",
-  dessert1:
-    "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlBYk41uEZaKoyMXSydyQSdosF5E8jKXQnYgjG9DQJbQFAO5sXI9V4_piqSH5JrkUvDP3ciYcuC7c3OsxtzpfB6d25i0_G5PTDHcpHZ5SW0Xd2Dda-WGBZrY8gexfs_N3QuJ8sbGw=w1200-h900-k-no",
-  dessert2:
-    "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnxKpHEwkQygEhRpkAr3sK8YkKKINItfhZYAe-O6sIYIY4VcfEhX4-Cz0pxVyCUVryKD5cBCdRST17Hi8vI2KDQDYgyNt4wuMjZT7q8dsV19OOtR6XGrll-09xlbViMPqLAb3iWxg=w1200-h900-k-no",
-  dessert3:
-    "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn6rRLzRbxvF-B7LsyE6yjFD_bKlMYyFvM-DeuAaFiH3b_HQM83yaSbYErcv8EyXlNpgMv2gp60AJp9CONwdrJ8ybtf5k5rrawE-q4PxsPsp5ngaLKbOFFq2NuU2GtkPtA4Mah2=w1200-h900-k-no",
-  interior2:
-    "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkQvw1WEossdE9qirPchP5Aem2BNEc-jr4Ixw-7QnbC5qkjbcOvVDuezyY5qXE4ZmxndyVtmu3jQATa-O59WSP3PVhaKx0jv2u9ACAzbGv950XDZVvl7vCeNaFL8BpZ_CQ6AxGovg=w1200-h900-k-no",
+  menuDisclaimer: "Cijene su informativne i mogu biti podložne promjenama.",
 } as const;
 
 export type MenuItem = {
@@ -81,16 +65,16 @@ export const MENU_CATEGORIES = [
       { name: "Latte", price: "3,00 KM" },
       { name: "Ledeni Latte", price: "3,00 KM" },
       { name: "Bosanska kafa", price: "3,00 KM" },
-      { name: "Ćaj", price: "2,50 KM" },
+      { name: "Čaj", price: "2,50 KM" },
       { name: "Topla čokolada", price: "3,50 KM" },
-      { name: "Borovnica", price: "3,50 KM" },
+      { name: "Borovnica sok", price: "3,50 KM" },
       { name: "Kuća prirode sokovi", price: "3,50 KM" },
       { name: "Gazirani sokovi", price: "4,00 KM" },
       { name: "Senzacija", price: "2,00 KM" },
       { name: "Mineralna voda", price: "2,50KM" },
       { name: "Flaširana voda", price: "2,00KM" },
     ] satisfies MenuItem[],
-    image: GALA_PHOTOS.interior2,
+    image: MEDIA.kafa1,
     description:
       "Pažljivo pripremljena kafa — od brzog espressa do tradicionalne bosanske kafe.",
   },
@@ -111,9 +95,9 @@ export const MENU_CATEGORIES = [
       { name: "Višnja kolač", price: "4 KM" },
       { name: "Kinder Pingvin kolač", price: "4 KM" },
     ] satisfies MenuItem[],
-    image: GALA_PHOTOS.dessert1,
+    image: MEDIA.gala8,
     description:
-      "Svježe pripremljeni kolači i deserti, pravljeni svakodnevno u našoj slastičarnoj.",
+      "Kolači i deserti — pravljeni svakodnevno u našoj slastičarnoj.",
   },
   {
     title: "Cijele torte",
@@ -125,7 +109,7 @@ export const MENU_CATEGORIES = [
       { name: "Kinder Pingvin torta", price: "50 KM" },
       { name: "Torta za 30 osoba", price: "80 KM" },
     ] satisfies MenuItem[],
-    image: GALA_PHOTOS.dessert2,
+    image: MEDIA.torta1,
     description:
       "Cijele torte za proslave, rođendane i posebne prilike — naručite unaprijed.",
   },
@@ -136,7 +120,7 @@ export const WHY_VISIT = [
     icon: "coffee",
     title: "Vrhunska kafa",
     description:
-      "Kvalitetno pripremljena kafa — od brzog espressa do opuštenog latta.",
+      "Kvalitetno pripremljena kafa.",
   },
   {
     icon: "cake",
@@ -148,7 +132,7 @@ export const WHY_VISIT = [
     icon: "leaf",
     title: "Ugodna atmosfera",
     description:
-      "Topao i opuštajući prostor — idealan za duže zadržavanje.",
+      "Topao i opuštajući prostor.",
   },
   {
     icon: "heart",
@@ -160,7 +144,7 @@ export const WHY_VISIT = [
     icon: "map-pin",
     title: "Lako dostupno",
     description:
-      "Pogodna lokacija u ulici Džemala Bijedića, s vanjskim sjedenjem.",
+      "Pogodna lokacija u ulici Džemala Bijedića.",
   },
 ] as const;
 
@@ -171,7 +155,7 @@ export const REVIEWS = [
     note: "Inspirisano utiscima gostiju",
   },
   {
-    text: "Jedno od naših omiljenih mjesta u Sarajevu. Divni deserti, pristupačne cijene i lijepa terasa.",
+    text: "Jedno od naših omiljenih mjesta u Sarajevu. Divni deserti, pristupačne cijene i prelijepa bašta.",
     author: "Primjer recenzije",
     note: "Inspirisano utiscima gostiju",
   },
@@ -181,51 +165,6 @@ export const REVIEWS = [
     note: "Inspirisano utiscima gostiju",
   },
 ] as const;
-
-export const GALLERY_IMAGES = [
-  {
-    src: GALA_PHOTOS.exterior,
-    alt: "Spoljašnjost Slastičarne Gala u Sarajevu",
-    aspect: "tall",
-  },
-  {
-    src: GALA_PHOTOS.dessert2,
-    alt: "Ponuda torti i kolača u Slastičarni Gala",
-    aspect: "wide",
-  },
-  {
-    src: GALA_PHOTOS.interior1,
-    alt: "Enterijer Slastičarne Gala",
-    aspect: "square",
-  },
-  {
-    src: GALA_PHOTOS.dessert1,
-    alt: "Deserti u Slastičarni Gala",
-    aspect: "wide",
-  },
-  {
-    src: GALA_PHOTOS.interior2,
-    alt: "Prostor za sjedenje u Slastičarni Gala",
-    aspect: "tall",
-  },
-  {
-    src: GALA_PHOTOS.dessert3,
-    alt: "Kolači i poslastice u Slastičarni Gala",
-    aspect: "square",
-  },
-  {
-    src: GALA_PHOTOS.dessert2,
-    alt: "Torte u Slastičarni Gala",
-    aspect: "wide",
-  },
-  {
-    src: GALA_PHOTOS.exterior,
-    alt: "Slastičarna Gala — pogled s ulice",
-    aspect: "tall",
-  },
-] as const;
-
-export const HERO_IMAGE = GALA_PHOTOS.exterior;
 
 export const COUNTERS = [
   { value: 350, suffix: "+", label: "Recenzije gostiju" },
@@ -243,8 +182,6 @@ export const SECTIONS = {
   about: {
     eyebrow: "O nama",
     title: "Omiljeno mjesto za kafu i kolače",
-    description:
-      "Slastičarna Gala je omiljena poslastičarnica u Sarajevu gdje gosti dolaze po kafi, domaćim tortama, kolačima i opuštajućoj atmosferi.",
   },
   menu: {
     eyebrow: "Naš meni",
@@ -258,13 +195,19 @@ export const SECTIONS = {
     eyebrow: "Galerija",
     title: "Trenuci u Gali",
     description:
-      "Pogled na atmosferu, kafu i kolače zbog kojih nam se gosti vraćaju.",
+      "Atmosfera i detalji zbog kojih nam se gosti rado vraćaju.",
+  },
+  dessertVideos: {
+    eyebrow: "Poslastičarska radnja",
+    title: "Pripremljeni s pažnjom",
+    description:
+      "Pogledajte kako naši kolači nastaju i serviraju se.",
   },
   whyVisit: {
     eyebrow: "Zašto nas posjetiti",
     title: "Zašto gosti vole Galu",
     description:
-      "Sve šta očekujete od lokalne slastičarne .",
+      "Sve šta očekujete od nas.",
   },
   reviews: {
     eyebrow: "Recenzije",
@@ -274,7 +217,7 @@ export const SECTIONS = {
     eyebrow: "Kontakt",
     title: "Posjetite nas",
     description:
-      "Otvoreni smo svaki dan i rado vas dočekujemo — bilo za brzu kafu ili duže zadržavanje.",
+      "Otvoreni smo svaki dan i rado vas dočekujemo.",
     address: "Adresa",
     phone: "Telefon",
     hours: "Radno vrijeme",

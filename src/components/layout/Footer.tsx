@@ -1,6 +1,8 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Phone, Clock } from "lucide-react";
 import { NAV_LINKS, SITE, SOCIAL_LINKS, UI } from "@/lib/constants";
+import { LOGO } from "@/lib/media";
 
 function SocialIcon({ icon }: { icon: string }) {
   if (icon === "facebook") {
@@ -30,9 +32,7 @@ export function Footer() {
           >
             {SITE.name}
           </Link>
-          <p className="mt-4 max-w-md text-sm leading-relaxed text-muted">
-            {SITE.tagline}
-          </p>
+
           <div className="mt-6 flex gap-3">
             {SOCIAL_LINKS.map((social) => (
               <a
@@ -90,9 +90,18 @@ export function Footer() {
       </div>
 
       <div className="border-t border-[var(--card-border)] px-5 py-6 md:px-8">
-        <p className="text-center text-xs text-muted">
-          © {year} {SITE.name}. {UI.allRights}
-        </p>
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-5">
+          <Image
+            src={LOGO}
+            alt="Slastičarna Gala logo"
+            width={120}
+            height={120}
+            className="h-16 w-auto opacity-90 md:h-20"
+          />
+          <p className="text-center text-xs text-muted">
+            © {year} {SITE.name}. {UI.allRights}
+          </p>
+        </div>
       </div>
     </footer>
   );

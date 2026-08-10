@@ -3,7 +3,8 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { HERO_IMAGE, SECTIONS } from "@/lib/constants";
+import { HERO_IMAGE } from "@/lib/media";
+import { SECTIONS } from "@/lib/constants";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 
 export function About() {
@@ -13,7 +14,6 @@ export function About() {
         <SectionHeading
           eyebrow={SECTIONS.about.eyebrow}
           title={SECTIONS.about.title}
-          description={SECTIONS.about.description}
         />
 
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
@@ -26,7 +26,7 @@ export function About() {
           >
             <Image
               src={HERO_IMAGE}
-              alt="Enterijer Slastičarne Gala u Sarajevu"
+              alt="Vanjska terasa Slastičarne Gala u Sarajevu"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover transition-transform duration-700 hover:scale-105"
@@ -45,10 +45,10 @@ export function About() {
 
             {/* TEKST */}
             <motion.p variants={fadeInUp} className="text-xl leading-relaxed text-muted">
-              Na adresi Džemala Bijedića 48, Gala je postala omiljeno mjesto za
-              lokalce i posjetioce. Poznati smo po ljubaznoj usluzi, svježim kolačima i ugodnom ambijentu.
-              Uz pristupačne cijene i radno vrijeme od jutra do kasne večeri, 
-              ovo je idealno mjesto za opuštenu kafu i druženje.
+            Na adresi Džemala Bijedića 48, Gala je postala omiljeno mjesto za lokalce i posjetioce.
+            Poznati smo po ljubaznoj usluzi, svježim kolačima i ugodnom ambijentu.
+             Uz pristupačne cijene i radno vrijeme od jutra do kasne večeri, 
+            ovo je idealno mjesto za opuštenu kafu i druženje.
             </motion.p>
 
             {/* LINIJA ISPOD TEKSTA */}

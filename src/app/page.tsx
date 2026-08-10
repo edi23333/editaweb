@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
 import { Menu } from "@/components/sections/Menu";
+import { DessertVideos } from "@/components/sections/DessertVideos";
 import { Gallery } from "@/components/sections/Gallery";
 import { WhyVisit } from "@/components/sections/WhyVisit";
 import { Reviews } from "@/components/sections/Reviews";
@@ -20,6 +21,7 @@ export default function Home() {
       <Hero />
       <About />
       <Menu />
+      <DessertVideos />
       <Gallery />
       <WhyVisit />
       <Reviews />

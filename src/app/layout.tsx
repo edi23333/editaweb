@@ -5,7 +5,8 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollProgress } from "@/components/layout/ScrollProgress";
 import { BackToTop } from "@/components/layout/BackToTop";
-import { HERO_IMAGE, SITE, UI } from "@/lib/constants";
+import { HERO_IMAGE } from "@/lib/media";
+import { SITE, UI } from "@/lib/constants";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     description: SITE.description,
     images: [
       {
-        url: HERO_IMAGE,
+        url: `${SITE.url}${HERO_IMAGE}`,
         width: 1200,
         height: 900,
         alt: "Slastičarna Gala — poslastičarnica u Sarajevu",
@@ -56,7 +57,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${SITE.name} | Kafa i poslastice u Sarajevu`,
     description: SITE.description,
-    images: [HERO_IMAGE],
+    images: [`${SITE.url}${HERO_IMAGE}`],
   },
   robots: {
     index: true,
@@ -72,7 +73,7 @@ const structuredData = {
   url: SITE.url,
   telephone: SITE.phone,
   priceRange: "$",
-  image: HERO_IMAGE,
+  image: `${SITE.url}${HERO_IMAGE}`,
   address: {
     "@type": "PostalAddress",
     streetAddress: SITE.address.street,

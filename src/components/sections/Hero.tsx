@@ -1,14 +1,14 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowDown } from "lucide-react";
-import { HERO_IMAGE, SITE, UI } from "@/lib/constants";
+import { HERO_VIDEO } from "@/lib/media";
+import { SITE, UI } from "@/lib/constants";
 
 export function Hero() {
   const { scrollY } = useScroll();
-  const imageY = useTransform(scrollY, [0, 600], [0, 150]);
+  const videoY = useTransform(scrollY, [0, 600], [0, 150]);
   const contentY = useTransform(scrollY, [0, 600], [0, 80]);
   const opacity = useTransform(scrollY, [0, 400], [1, 0.3]);
 
@@ -18,15 +18,18 @@ export function Hero() {
       aria-label="Početna"
       className="relative flex min-h-screen items-end overflow-hidden"
     >
-      <motion.div style={{ y: imageY }} className="absolute inset-0">
-        <Image
-          src={HERO_IMAGE}
-          alt="Spoljašnjost Slastičarne Gala u Sarajevu"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
+      <motion.div style={{ y: videoY }} className="absolute inset-0">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-hidden
+          className="h-full w-full object-cover"
+        >
+          <source src={HERO_VIDEO} type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-t from-espresso/80 via-espresso/30 to-espresso/10" />
       </motion.div>
 
