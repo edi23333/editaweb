@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { MENU_CATEGORIES, SECTIONS, UI } from "@/lib/constants";
+import { MENU_CATEGORIES, SECTIONS } from "@/lib/constants";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 
 export function Menu() {
@@ -69,7 +69,9 @@ export function Menu() {
           ))}
         </motion.div>
 
-        <p className="mt-10 text-center text-xs text-muted">{UI.menuDisclaimer}</p>
+        <p className="mt-10 text-center text-xs text-muted">
+          {SECTIONS.menu.menuDisclaimer}
+        </p>
       </div>
     </section>
   );

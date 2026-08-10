@@ -251,6 +251,8 @@ export const SECTIONS = {
     title: "Prirodni okusi, jednostavno i ukusno",
     description:
       "Od jutarnjeg espressa do poslijepodnevnog kolača — izbor kafe, deserta i cijelih torti za vaš tempo.",
+    menuDisclaimer:
+      "Cijene su informativne i mogu biti podložne promjenama.",
   },
   gallery: {
     eyebrow: "Galerija",
