@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+:root {
+  --cream: #faf7f2;
+  --beige: #f0e8dc;
+  --sand: #e8dfd1;
+  --espresso: #3d2314;
+  --brown: #6b4c3b;
+  --gold: #b8956a;
+  --charcoal: #2c2c2c;
+  --background: var(--cream);
+  --foreground: var(--charcoal);
+  --muted: #6b6560;
+  --card: #ffffff;
+  --card-border: rgba(61, 35, 20, 0.08);
+  --shadow-soft: 0 4px 24px rgba(61, 35, 20, 0.06);
+  --shadow-hover: 0 12px 40px rgba(61, 35, 20, 0.1);
+}
+
+.dark {
+  --cream: #1a1612;
+  --beige: #231e19;
+  --sand: #2d2720;
+  --espresso: #f0e8dc;
+  --brown: #c4a882;
+  --gold: #d4b896;
+  --charcoal: #f5f0e8;
+  --background: #1a1612;
+  --foreground: #f5f0e8;
+  --muted: #a89f94;
+  --card: #231e19;
+  --card-border: rgba(245, 240, 232, 0.08);
+  --shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.25);
+  --shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-cream: var(--cream);
+  --color-beige: var(--beige);
+  --color-sand: var(--sand);
+  --color-espresso: var(--espresso);
+  --color-brown: var(--brown);
+  --color-gold: var(--gold);
+  --color-charcoal: var(--charcoal);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --font-heading: var(--font-playfair);
+  --font-body: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--gold) 35%, transparent);
+  color: var(--foreground);
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  background: var(--espresso);
+  color: var(--cream);
+  font-weight: 600;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.card-shadow {
+  box-shadow: var(--shadow-soft);
+}
+
+.card-shadow-hover:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.section-padding {
+  padding-block: clamp(4rem, 8vw, 7rem);
+}
+
+.gold-divider {
+  width: 3rem;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  border-radius: 999px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.loading-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--beige) 0%,
+    var(--sand) 50%,
+    var(--beige) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
