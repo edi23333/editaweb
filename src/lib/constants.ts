@@ -6,7 +6,7 @@ export const SITE = {
   tagline:
     "Spoj vrhunske kafe, svježih kolača i ugodnog ambijenta u Sarajevu.",
   description:
-    "Slastičarna Gala — omiljena lokalna slastičarna u Sarajevu. Uživajte u kvalitetnoj kafi, domaćim tortama, kolačima i opuštajućoj atmosferi",
+    "Slastičarna Gala — omiljena lokalna slastičarna u Sarajevu. Uživajte u kvalitetnoj kafi, domaćim tortama, kolačima i opuštajući atmosferi",
   url: "https://slasticarna-gala.ba",
   phone: "+387 33 718 600",
   phoneHref: "tel:+38733718600",
@@ -110,7 +110,7 @@ export const MENU_CATEGORIES = [
       { name: "Kinder Pingvin torta", price: "50 KM" },
       { name: "Torta za 30 osoba", price: "80 KM" },
     ] satisfies MenuItem[],
-    image: MEDIA.torta1,
+    image: MEDIA.tortanova,
     description:
       "Cijele torte za proslave, rođendane i posebne prilike — naručite unaprijed.",
   },
@@ -120,32 +120,27 @@ export const WHY_VISIT = [
   {
     icon: "coffee",
     title: "Vrhunska kafa",
-    description:
-      "Kvalitetno pripremljena kafa.",
+    description: "Kvalitetno pripremljena kafa.",
   },
   {
     icon: "cake",
     title: "Svježi kolači",
-    description:
-      "Domaći kolači i deserti pečeni svježe tokom cijelog dana.",
+    description: "Domaći kolači i deserti pečeni svježe tokom cijelog dana.",
   },
   {
     icon: "leaf",
     title: "Ugodna atmosfera",
-    description:
-      "Topao i opuštajući prostor.",
+    description: "Topao i opuštajući prostor.",
   },
   {
     icon: "heart",
     title: "Ljubazna usluga",
-    description:
-      "Gostoljubivo osoblje koje svakog gosta dočeka s osmijehom.",
+    description: "Gostoljubivo osoblje koje svakog gosta dočeka s osmijehom.",
   },
   {
     icon: "map-pin",
     title: "Lako dostupno",
-    description:
-      "Pogodna lokacija u ulici Džemala Bijedića.",
+    description: "Pogodna lokacija u ulici Džemala Bijedića.",
   },
 ] as const;
 

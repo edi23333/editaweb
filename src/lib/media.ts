@@ -51,7 +51,8 @@ export const MEDIA = {
     "images",
     "kapucino.jpg",
   ),
-  gala8: assetPath("images", "gala8.jpg"), // <- DODANO OVDJE DABI CONSTANTS.TS MOGAO KORISTITI MEDIA.gala8
+  gala8: assetPath("images", "gala8.jpg"),
+  tortanova: assetPath("images", "tortanova.jpg"), // <-- ADDED HERE TO FIX THE MISSING IMAGE ERROR
   torta1: assetPath("images", "torta1.jpg"),
   torta2: assetPath("images", "gala3.jpg"),
   torta3: assetPath("images", "torta.jpg"),
