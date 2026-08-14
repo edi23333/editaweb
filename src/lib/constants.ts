@@ -6,7 +6,7 @@ export const SITE = {
   tagline:
     "Spoj vrhunske kafe, svježih kolača i ugodnog ambijenta u Sarajevu.",
   description:
-    "Slastičarna Gala — omiljena lokalna slastičarna u Sarajevu. Uživajte u kvalitetnoj kafi, domaćim tortama, kolačima i opuštajući atmosferi",
+    "Slastičarna Gala — omiljena lokalna slastičarna u Sarajevu. Uživajte u kvalitetnoj kafi, domaćim tortama, kolačima i opuštajućoj atmosferi",
   url: "https://slasticarna-gala.ba",
   phone: "+387 33 718 600",
   phoneHref: "tel:+38733718600",
