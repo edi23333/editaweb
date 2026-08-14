@@ -189,9 +189,9 @@ export const SECTIONS = {
   },
   menu: {
     eyebrow: "Naš meni",
-    title: "Prirodni okusi, jednostavno i ukusno",
+    title: "Jednostavno i ukusno",
     description:
-      "Od jutarnjeg espressa do poslijepodnevnog kolača — izbor kafe, deserta i cijelih torti za vaš tempo.",
+      "Izbor kafe, deserta i cijelih torti.",
     menuDisclaimer:
       "Cijene su informativne i mogu biti podložne promjenama.",
   },
