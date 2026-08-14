@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, Phone, Clock } from "lucide-react";
+import { MapPin, Phone, Clock, Wifi } from "lucide-react";
 import { NAV_LINKS, SITE, SOCIAL_LINKS, UI } from "@/lib/constants";
 import { LOGO } from "@/lib/media";
 
@@ -26,18 +26,13 @@ export function Footer() {
     <footer className="border-t border-[var(--card-border)] bg-beige/50 dark:bg-[#231e19]/50">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-2 md:px-8 lg:grid-cols-4">
         <div className="lg:col-span-2">
-          <Link
-            href="#home"
-            className="font-heading text-2xl font-medium text-espresso dark:text-cream"
-          >
-            {SITE.name}
-          </Link>
-
-          <div className="mt-6 flex gap-3">
+          <div className="flex gap-3">
             {SOCIAL_LINKS.map((social) => (
               <a
                 key={social.label}
                 href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={social.label}
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--card-border)] bg-card text-muted transition-all hover:border-gold/40 hover:text-gold"
               >
@@ -69,6 +64,13 @@ export function Footer() {
             <li className="flex items-center gap-3">
               <Clock className="h-4 w-4 shrink-0 text-gold" aria-hidden />
               <span>{SITE.hours}</span>
+            </li>
+            <li className="flex items-center gap-3">
+              <Wifi className="h-4 w-4 shrink-0 text-gold" aria-hidden />
+              <span>
+                Wi-Fi lozinka:{" "}
+                <span className="font-medium text-foreground">{SITE.wifiPassword}</span>
+              </span>
             </li>
           </ul>
         </div>

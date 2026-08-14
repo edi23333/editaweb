@@ -17,6 +17,7 @@ export const SITE = {
     full: "Džemala Bijedića 48, Sarajevo, Bosna i Hercegovina",
   },
   hours: "Svaki dan · 07:00 – 22:30",
+  wifiPassword: "gala2024",
   rating: 4.5,
   reviewCount: 350,
   priceRange: "1–5 KM",
@@ -174,8 +175,16 @@ export const COUNTERS = [
 ] as const;
 
 export const SOCIAL_LINKS = [
-  { label: "Facebook", href: "#", icon: "facebook" },
-  { label: "Instagram", href: "#", icon: "instagram" },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/caffegala/",
+    icon: "instagram",
+  },
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/CaffeSlasticarnaGala/",
+    icon: "facebook",
+  },
 ] as const;
 
 export const SECTIONS = {
