@@ -69,6 +69,7 @@ export const MEDIA = {
   ),
   ambijent3: assetPath("images", "gala11.jpg"),
   ambijent4: assetPath("images", "ambijernt.jpg"),
+  cafa: assetPath("images", "cafa.jpg"),
 } as const;
 
 export type GalleryImage = {

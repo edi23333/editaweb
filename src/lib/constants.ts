@@ -57,64 +57,129 @@ export type MenuItem = {
   price: string;
 };
 
-export const MENU_CATEGORIES = [
+export type MenuSubcategory = {
+  title: string;
+  items: readonly MenuItem[];
+};
+
+export type MenuCategory = {
+  id: string;
+  title: string;
+  image: string;
+  items: readonly MenuItem[];
+  subcategories?: readonly MenuSubcategory[];
+};
+
+export const MENU_CATEGORIES: readonly MenuCategory[] = [
   {
-    title: "Napitci",
+    id: "topli-napici",
+    title: "Topli napitci",
+    image: MEDIA.kafa1,
     items: [
       { name: "Espresso", price: "2,50 KM" },
+      { name: "Macchiato", price: "3,00 KM" },
       { name: "Cappuccino", price: "3,50 KM" },
-      { name: "Latte", price: "3,00 KM" },
-      { name: "Ledeni Latte", price: "3,00 KM" },
+      { name: "Latte macchiato", price: "4,00 KM" },
+      { name: "Dupli espresso", price: "5,00 KM" },
+      { name: "Espresso sa šlagom", price: "3,00 KM" },
+      { name: "Ness", price: "3,50 KM" },
+      { name: "Topla čokolada", price: "4,50 KM" },
       { name: "Bosanska kafa", price: "3,00 KM" },
       { name: "Čaj", price: "2,50 KM" },
-      { name: "Topla čokolada", price: "3,50 KM" },
-      { name: "Borovnica sok", price: "3,50 KM" },
-      { name: "Kuća prirode sokovi", price: "3,50 KM" },
-      { name: "Gazirani sokovi", price: "4,00 KM" },
-      { name: "Senzacija", price: "2,00 KM" },
-      { name: "Mineralna voda", price: "2,50KM" },
-      { name: "Flaširana voda", price: "2,00KM" },
-    ] satisfies MenuItem[],
-    image: MEDIA.kafa1,
-    description:
-      "Pažljivo pripremljena kafa — od brzog espressa do tradicionalne bosanske kafe.",
+      { name: "Salep", price: "3,00 KM" },
+    ],
   },
   {
-    title: "Deserti",
-    items: [
-      { name: "Voćna kocka", price: "4 KM" },
-      { name: "Nutella kocka", price: "4 KM" },
-      { name: "Orah kolač", price: "4 KM" },
-      { name: "Trileće", price: "4 KM" },
-      { name: "Šampita", price: "4 KM" },
-      { name: "Nugat kolač", price: "4 KM" },
-      { name: "Pistacija kolač", price: "5 KM" },
-      { name: "Kadaif", price: "4 KM" },
-      { name: "Hurmašica", price: "3 KM" },
-      { name: "Tufahija", price: "4 KM" },
-      { name: "Bombica", price: "4 KM" },
-      { name: "Višnja kolač", price: "4 KM" },
-      { name: "Kinder Pingvin kolač", price: "4 KM" },
-    ] satisfies MenuItem[],
-    image: MEDIA.gala8,
-    description:
-      "Kolači i deserti — pravljeni svakodnevno u našoj slastičarnoj.",
-  },
-  {
-    title: "Cijele torte",
-    items: [
-      { name: "Orah torta", price: "50 KM" },
-      { name: "Nutella torta", price: "60 KM" },
-      { name: "Havana torta", price: "50 KM" },
-      { name: "Čokoladna torta", price: "50 KM" },
-      { name: "Kinder Pingvin torta", price: "50 KM" },
-      { name: "Torta za 30 osoba", price: "80 KM" },
-    ] satisfies MenuItem[],
+    id: "torte",
+    title: "Torte",
     image: MEDIA.tortanova,
-    description:
-      "Cijele torte za proslave, rođendane i posebne prilike — naručite unaprijed.",
+    items: [
+      { name: "Čokoladna torta", price: "50 KM" },
+      { name: "Višnja torta", price: "50 KM" },
+      { name: "Orah torta", price: "50 KM" },
+      { name: "Švarcvald torta", price: "50 KM" },
+      { name: "Kinder Pingvin torta", price: "60 KM" },
+      { name: "Nutella torta", price: "60 KM" },
+      { name: "Sacher torta", price: "70 KM" },
+      { name: "Havana torta", price: "80 KM" },
+      { name: "Medena torta", price: "80 KM" },
+      { name: "Voćna torta", price: "60 KM" },
+      { name: "Karamela torta", price: "60 KM" },
+      { name: "Kokos torta", price: "60 KM" },
+    ],
   },
-] as const;
+  {
+    id: "kolaci",
+    title: "Kolači",
+    image: MEDIA.gala8,
+    items: [
+      { name: "Nutella kocka", price: "4,00 KM" },
+      { name: "Voćna kocka", price: "4,00 KM" },
+      { name: "Kinder šnita", price: "4,00 KM" },
+      { name: "Kinder nugat šnita", price: "4,00 KM" },
+      { name: "Borovnica šnita", price: "4,00 KM" },
+      { name: "Bombica", price: "4,00 KM" },
+      { name: "Banana šnita", price: "4,00 KM" },
+      { name: "Bueno", price: "4,00 KM" },
+      { name: "Rafaelo", price: "4,00 KM" },
+      { name: "Šampita", price: "4,00 KM" },
+      { name: "Trileće", price: "4,00 KM" },
+      { name: "Tufahija", price: "5,00 KM" },
+      { name: "Hurmašica", price: "3,00 KM" },
+      { name: "Kadaif", price: "4,00 KM" },
+      { name: "Karamela", price: "4,00 KM" },
+      { name: "Gala šnita", price: "4,00 KM" },
+      { name: "Čoko višnja", price: "4,00 KM" },
+      { name: "Orah šnita", price: "4,00 KM" },
+      { name: "Kokos šnita", price: "4,00 KM" },
+    ],
+  },
+  {
+    id: "sokovi",
+    title: "Sokovi",
+    image: MEDIA.cafa,
+    items: [],
+    subcategories: [
+      {
+        title: "Negazirana pića",
+        items: [
+          { name: "Cedevita", price: "2,50 KM" },
+          { name: "Domaća borovnica", price: "3,50 KM" },
+          { name: "Gusti sokovi", price: "3,50 KM" },
+          { name: "Ledeni čaj", price: "3,00 KM" },
+        ],
+      },
+      {
+        title: "Gazirana pića",
+        items: [
+          { name: "Coca Cola", price: "4,00 KM" },
+          { name: "Coca Cola Zero", price: "4,00 KM" },
+          { name: "Kokta", price: "4,00 KM" },
+          { name: "Fanta", price: "4,00 KM" },
+          { name: "Schweppes", price: "4,00 KM" },
+          { name: "Orangina", price: "4,00 KM" },
+          { name: "Kisela", price: "2,50 KM" },
+          { name: "Senzacija", price: "2,50 KM" },
+        ],
+      },
+      {
+        title: "Cijeđeni sokovi",
+        items: [
+          { name: "Cijeđena narandža", price: "4,50 KM" },
+          { name: "Limunada", price: "3,00 KM" },
+          { name: "Cijeđeni mix", price: "6,00 KM" },
+        ],
+      },
+      {
+        title: "Voda",
+        items: [
+          { name: "Flaširana voda", price: "2,50 KM" },
+          { name: "Voda-limun", price: "3,00 KM" },
+        ],
+      },
+    ],
+  },
+];
 
 export const WHY_VISIT = [
   {
