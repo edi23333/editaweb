@@ -38,7 +38,7 @@ export const DESSERT_VIDEOS: readonly DessertVideo[] = [
   },
 ] as const;
 
-export const LOGO = assetPath("images", "gala_trans-removebg-preview.png");
+export const LOGO = assetPath("images", "newlogo.png");
 
 /** Used for OpenGraph, schema.org and About section */
 export const HERO_IMAGE = assetPath("images", "header1.jpg");
@@ -52,7 +52,7 @@ export const MEDIA = {
     "kapucino.jpg",
   ),
   gala8: assetPath("images", "gala8.jpg"),
-  tortanova: assetPath("images", "tortanova.jpg"), // <-- ADDED HERE TO FIX THE MISSING IMAGE ERROR
+  tortanova: assetPath("images", "tortanova.jpg"),
   torta1: assetPath("images", "torta1.jpg"),
   torta2: assetPath("images", "gala3.jpg"),
   torta3: assetPath("images", "torta.jpg"),
@@ -61,7 +61,6 @@ export const MEDIA = {
   torta6: assetPath("images", "gača7.jpg"),
   torta7: assetPath("images", "gala 10.jpg"),
   torta8: assetPath("images", "gala4.jpg"),
-  torta9: assetPath("images", "gala11.jpg"),
   ambijent1: assetPath("images", "gala2.jpg"),
   ambijent2: assetPath(
     "images",

@@ -227,13 +227,6 @@ export const REVIEWS = [
   },
 ] as const;
 
-export const COUNTERS = [
-  { value: 350, suffix: "+", label: "Recenzije gostiju" },
-  { value: 4.5, suffix: "", label: "Prosječna ocjena", decimals: 1 },
-  { value: 15, suffix: "+", label: "Sati otvoreno dnevno" },
-  { value: 3, suffix: "", label: "Kategorije menija" },
-] as const;
-
 export const SOCIAL_LINKS = [
   {
     label: "Instagram",

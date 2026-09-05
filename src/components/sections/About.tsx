@@ -40,10 +40,8 @@ export function About() {
             viewport={{ once: true, margin: "-80px" }}
             className="flex flex-col items-center text-center justify-center gap-6"
           >
-            {/* LINIJA IZNAD TEKSTA */}
             <motion.div variants={fadeInUp} className="h-0.5 w-12 bg-gold/50" />
 
-            {/* TEKST */}
             <motion.p variants={fadeInUp} className="text-xl leading-relaxed text-muted">
             Na adresi Džemala Bijedića 48, Gala je postala omiljeno mjesto za lokalce i posjetioce.
             Poznati smo po ljubaznoj usluzi, svježim kolačima i ugodnom ambijentu.
@@ -51,7 +49,6 @@ export function About() {
             ovo je idealno mjesto za opuštenu kafu i druženje.
             </motion.p>
 
-            {/* LINIJA ISPOD TEKSTA */}
             <motion.div variants={fadeInUp} className="h-0.5 w-12 bg-gold/50" />
           </motion.div>
         </div>
